@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #121212;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100vw;
+            height: 9vh;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInDown 1s ease-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #00d8ff;
+        }
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            width: 100%;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-top: 50px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            animation: slideUp 1s ease-out forwards;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .hero:hover{
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 30px white;
+        }
+
+        .hero img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px #00d8ff;
+            transition: 0.3s;
+        }
+        .hero img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px #00d8ff;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-top: 20px;
+            color: #00d8ff;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .contact-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            border-radius: 25px;
+            background: #00d8ff;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 0px 15px #00d8ff;
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px #00d8ff;
+        }
+        
+        
+        .glow1, .glow2 {
+            display: flex;
+            position: absolute;
+            width: 100vw;  
+            height: 25vh;  
+            filter: blur(120px);
+            top: 40vh;
+            z-index: -10;
+            opacity: 50%;
+        }
+
+        .glow1 {
+             background: linear-gradient(rgba(84, 84, 212, 0.6) 10%, transparent 60%);
+             left: 0;
+             transform: rotate(30deg);
+        }
+
+        .glow2 {
+             background: linear-gradient(rgba(224, 86, 136) 10%, transparent 60%);
+             right: 0;
+             transform: rotate(-30deg);
+        }
+
+        .skills {
+            text-align: center;
+            padding: 80px 0;
+        }
+        .skills h2 {
+            font-size: 40px;
+            text-shadow: 0px 0px 15px white;
+        }
+        .skills-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .skill-card {
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            text-align: center;
+            font-size: 21px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .skill-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:  rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(5px); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .skill-card .overlay button {
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            border: 2px solid #00d8ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px #00d8ff;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            min-width: 150px;
+            height: 45px;
+        }
+
+        .skill-card .overlay button a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .skill-card .overlay button:hover {
+            background: white;
+            color: black;
+            box-shadow: 0px 0px 15px white;
+        }
+
+        .skill-card .overlay button:hover a {
+            color: black;
+        }
+
+
+
+        .skill-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 25px white;
+        }
+
+        .skill-card img {
+            width: 100px;
+            height: 100px;
+        }
+        .skills-grid .skill-card {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .skills-grid .skill-card:nth-child(1) { animation-delay: 0.5s; }
+        .skills-grid .skill-card:nth-child(2) { animation-delay: 0.7s; }
+        .skills-grid .skill-card:nth-child(3) { animation-delay: 0.9s; }
+        .skills-grid .skill-card:nth-child(4) { animation-delay: 1.1s; }
+        .skills-grid .skill-card:nth-child(5) { animation-delay: 1.3s; }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .footer {
+            
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        @keyframes slideIn {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        @media screen and (max-width: 480px) and (orientation: landscape) {
+            .navbar {
+                padding: 15px 20px;
+            }
+            .hero-content {
+                height: max-content;
+            }
+            .hero{
+                margin-top: 50px;
+                padding: 20px;
+            }
+            .hero img {
+                width: 200px;
+                height: 180px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .contact-btn {
+                padding: 8px 20px;
+            }
+            .skills h2 {
+                font-size: 32px;
+            }
+            .skills-grid {
+                gap: 20px;
+            }
+            .skill-card {
+                width: 120px;
+                height: 120px;
+            }
+            .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div style="font-size: 26px;">Portfolio</div>
+        <div class="nav-links">
+            <a href="./Home.html">Home</a>
+            <a href="./Projects.html">Projects</a>
+            <a href="./About.html">About Me</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="hero">
+        <img src="./prophoto.png" alt="Profile">
+        <h1>Durga Prasad Paudel</h1>
+        <p>I'm a <span style="animation: slideIn 1s ease-in-out forwards;color: yellow;" class="skl">Web Designer</span> | <span style="animation: slideIn 2s ease-in-out forwards;color: yellow;" class="skl"> Automotive Enthusiast</span>  | <span style="animation: slideIn 3s ease-in-out forwards;color: yellow;" class="skl">Graphic Designer</span>  </p>
+        <a download href="./Resume.jpg" class="contact-btn">Download Resume</a>
+        </div>
+        
+        <div class="glow1"></div>
+        <div class="glow2"></div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>Skills I’m Familiar With:</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><img src="./html.png" alt="error"><span>HTML</span></div>
+            <div class="skill-card"><img src="./css.png" alt="error"><span>CSS</span></div>
+            <div class="skill-card"><img src="./js.png" alt="error"><span>JavaScript</span></div>
+            <div class="skill-card"><img src="./photoshop.png" alt="error" ><span>Adobe Photoshop</span></div>
+            <div class="skill-card"><img src="./scratch.png" alt="error" style="height: 60px;width: auto;"><span style="margin-top: 25px;">Block Programming</span></div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>Certificates:</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="./html.png" alt="error">
+                <span>Web Designing</span>
+                <div class="overlay">
+                    <button onclick="showCertificate('certificate1.jpg')"><a href="./certificate1.jpg">View Certificate</a></button>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="./css.png" alt="error">
+                <span>Block Programming</span>
+                <div class="overlay">
+                    <button onclick="showCertificate('certificate2.jpg')"><a href="">View Certificate</a></button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Durga Prasad Paudel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

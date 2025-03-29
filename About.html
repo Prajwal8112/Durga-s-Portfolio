@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Durga Prasad Paudel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100vw;
+            height: 9vh;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideDown 1s ease-out;
+        }
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: #00d8ff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            margin-top: 80px; 
+            opacity: 0;
+            animation: slideUp 1.5s ease-out forwards;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 15px #00d8ff;
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+        }
+        .image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            transition: 0.5s;
+            box-shadow: 0px 0px 15px #00d8ff;
+            animation: glowPulse 2s infinite alternate;
+        }
+        .image img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px #00d8ff;
+        }
+
+        @keyframes glowPulse {
+            from {
+                box-shadow: 0px 0px 15px #00d8ff;
+            }
+            to {
+                box-shadow: 0px 0px 30px #00d8ff;
+            }
+        }
+
+        .text {
+            flex: 2;
+            padding-left: 40px;
+            text-align: left;
+        }
+        
+        .text h1 {
+            font-size: 36px;
+            color: #00d8ff;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #00d8ff;
+            width: 0;
+            animation: typing 2s steps(20, end) forwards, blink 0.7s infinite alternate;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: #00d8ff;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+
+        .text p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        .text span {
+            color: yellow;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 52.08vw;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            margin-top: 80px; 
+            opacity: 0;
+            animation: slideUp 1.5s ease-out forwards;
+            gap: 20px;
+            width: 100%;
+        }
+        .container2:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 15px #00d8ff;
+        }
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .contact-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; 
+            align-items: center; 
+            width: 80%; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 10px 20px; 
+            border-radius: 10px; 
+            transition: 0.3s;
+        }
+        .contact-items{
+            display: flex;
+            flex-wrap: wrap; 
+            flex-direction: column; 
+            gap: 20px; 
+            align-items: center; 
+            width: 28.65vw;
+        }
+        .footer {
+            margin-top: 50px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        @media screen and (max-width: 480px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .text {
+                padding-left: 0;
+                margin-top: 20px;
+                text-align: left;
+            }
+            .contact-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                height: max-content;
+                width: auto;
+            }
+            .contact-info {
+                flex-direction: column;
+            }
+            
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div style="font-size: 26px;">Portfolio</div>
+        <div class="nav-links">
+            <a href="./Home.html">Home</a>
+            <a href="./Projects.html">Projects</a>
+            <a href="./About.html">About Me</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="image">
+                <img src="./prophoto.png" alt="Durga Prasad Paudel">
+            </div>
+            <div class="text">
+                <h1>Durga Prasad Paudel</h1>
+                <p>Hello! I'm Durga, a passionate <span>Web Designer</span>, <span>Automotive Enthusiast</span> , and <span>Graphic Designer</span>. I love blending creativity with technology to build visually stunning and user-friendly designs. My journey in web design started with a deep interest in coding and visual aesthetics, and I've been honing my skills ever since.</p>
+                <p>Beyond coding and design, I'm an automobile lover who enjoys exploring new technologies in the automotive world. Let's connect and create something amazing together!</p>
+                <p><span style="color: white;">Address:</span> Butwal, Nepal </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container2">
+            <h2>Contact Me</h2>
+            <div class="contact-items" style="display: flex; flex-direction: column; gap: 15px; align-items: center; width: 550px;">
+                
+                <div class="contact-item" >
+                    <div style="display: flex; align-items: center;flex-wrap: wrap;">
+                        <p>Facebook:</p>
+                        <p>Prajwal Paudel (Durga)</p>
+                    </div>
+                    <a href="https://www.facebook.com/profile.php?id=100054942633894" target="_blank">
+                        <button style="padding: 5px 10px; background: #1877F2; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;">Visit Profile</button>
+                    </a>
+                </div>
+                
+                <div class="contact-item" >
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 24px; color: #25D366;"></i>
+                        <p>WhatsApp</p>
+                    </div>
+                    <a href="https://wa.me/yourwhatsappnumber" target="_blank">
+                        <button style="padding: 5px 10px; background: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;">Chat Now</button>
+                    </a>
+                </div>
+                
+                <div class="contact-item" >
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-envelope" style="font-size: 24px; color: #FF5733;"></i>
+                        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paudelprajwal51@gmail.com" style="color: #00d8ff; text-decoration: none;">paudelprajwal51@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Durga Prasad Paudel. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
