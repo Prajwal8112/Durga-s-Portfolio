@@ -78,7 +78,19 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            animation: slideUp 1s ease-out forwards;
         }
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
 
         .project-card:hover {
             transform: scale(1.05);
@@ -119,13 +131,20 @@
         .project-info .view-btn:hover {
             background-color: #008c9e;
         }
+        .footer {
+            margin-top: 50px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div style="font-size: 26px;">Portfolio</div>
         <div class="nav-links">
-            <a href="./Home.html">Home</a>
+            <a href="./index.html">Home</a>
             <a href="./Projects.html">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
@@ -164,7 +183,7 @@
 
          <!-- Project 4 -->
          <div class="project-card">
-            <img src="./Project4.png" alt="Project 3">
+            <img src="./Project4.png" alt="Project 4">
             <div class="project-info">
                 <h3>iPhone-Style Calculator</h3>
                 <p>Designed an elegant calculator UI inspired by Apple's iOS calculator. Implemented smooth button styling with hover effects and rounded edges.Added a functional calculator logic using a simple myFunction() JavaScript function. Used CSS transitions and shadows to enhance the user experience. Optimized layout and spacing for better usability.</p>
@@ -174,7 +193,7 @@
 
          <!-- Project 5 -->
          <div class="project-card">
-            <img src="./Project5.png" alt="Project 3">
+            <img src="./Project5.png" alt="Project 5">
             <div class="project-info">
                 <h3>Floppy Bird Game</h3>
                 <p>This game is created using scratch during the certifications time of block programming in just one day.</p>
@@ -182,8 +201,20 @@
             </div>
         </div>
 
-        <!-- More projects can be added similarly -->
+        <!-- Project 6 -->
+        <div class="project-card">
+            <img src="./Project6.png" alt="Project 6">
+            <div class="project-info">
+                <h3>Windows 11 Clone</h3>
+                <p>A fully functional Windows 11 UI clone built using pure HTML, CSS, and JavaScript. This project replicates key Windows 11 features</p>
+                <a href="" class="view-btn">View Project</a>
+            </div>
+        </div>
     </div>
 
+
+    <footer class="footer">
+        <p>&copy; 2025 Durga Prasad Paudel. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
