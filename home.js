@@ -1,9 +1,9 @@
-function showCertificate(imageSrc) {
+function showCertificate(imageSrc1, imageSrc2) {
     const certWindow = window.open("", "_blank", "width=800,height=600");
     certWindow.document.writeln(`
         <html>
         <head>
-            <title>Certificate</title>
+            <title>Certificates</title>
             <style>
                 body {
                     display: flex;
@@ -12,6 +12,8 @@ function showCertificate(imageSrc) {
                     height: 100vh;
                     background: black;
                     margin: 0;
+                    flex-direction: column;
+                    gap: 20px;
                 }
                 img {
                     max-width: 90%;
@@ -22,8 +24,9 @@ function showCertificate(imageSrc) {
             </style>
         </head>
         <body>
-            <img src="${imageSrc}" alt="Certificate">
+            <img src="${imageSrc1}" alt="Certificate 1">
+            <img src="${imageSrc2}" alt="Certificate 2">
         </body>
         </html>
     `);
-     }
+}
