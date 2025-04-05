@@ -24,6 +24,23 @@
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
+
+        #glowCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
         
         @keyframes fadeIn {
             from {
@@ -81,6 +98,7 @@
             align-items: center;
             max-width: 1000px;
             background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
@@ -185,6 +203,7 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
             transition: 0.3s;
             margin-top: 80px; 
             opacity: 0;
@@ -256,6 +275,7 @@
     </style>
 </head>
 <body>
+    <canvas id="glowCanvas"></canvas>
     <nav class="navbar">
         <div style="font-size: 26px;">Portfolio</div>
         <div class="nav-links">
@@ -318,5 +338,7 @@
     <footer class="footer">
         <p>&copy; 2025 Durga Prasad Paudel. All Rights Reserved.</p>
     </footer>
+
+    <script src="home.js"></script>
 </body>
 </html>
