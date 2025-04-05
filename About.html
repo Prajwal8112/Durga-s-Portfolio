@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Durga Prasad Paudel</title>
+    <link rel="stylesheet" href="globalstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -198,7 +200,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 52.08vw;
+            max-width: 70.08vw;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 40px;
@@ -241,6 +243,10 @@
             align-items: center; 
             width: 28.65vw;
         }
+        .Email {
+            display: flex;
+            gap: 130px;
+        }
         .footer {
             margin-top: 50px;
             width: 100%;
@@ -258,6 +264,10 @@
                 margin-top: 20px;
                 text-align: left;
             }
+            .container2 {
+                width: 90%;
+                padding: 20px;
+            }
             .contact-item {
                 flex-direction: column;
                 align-items: center;
@@ -268,7 +278,18 @@
             .contact-info {
                 flex-direction: column;
             }
-            
+
+            .contact-item {
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+                width: 50%;
+            }
+            .Email {
+            display: flex;
+            text-align: left;
+            gap: 0px;
+        }
         }
         
 
@@ -283,7 +304,24 @@
             <a href="./Projects.html">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
+        <!-- Hamburger Menu for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
+    
+    <!-- Side Navigation for mobile -->
+    <div id="sideNav" class="side-nav">
+        <div class="aside-photo"><img src="./prophoto.png" alt="Profile error"></div>
+        <div class="aside-name" style="font-size: 20px;display: flex;flex-wrap: wrap;color: #00d8ff;">Durga Prasad Paudel</div>
+        <div class="aside-links">
+            <a href="./index.html">Home</a>
+            <a href="./Projects.html">Projects</a>
+            <a href="./About.html">About Me</a>
+        </div>
+    </div>
 
     <section>
         <div class="container">
@@ -306,8 +344,8 @@
                 
                 <div class="contact-item" >
                     <div style="display: flex; align-items: center;flex-wrap: wrap;">
-                        <p>Facebook:</p>
-                        <p>Prajwal Paudel (Durga)</p>
+                        <i class="fa-brands fa-facebook" style="font-size: 24px; color: #3700ff;"></i>
+                        <p>Prajwal Paudel</p>
                     </div>
                     <a href="https://www.facebook.com/profile.php?id=100054942633894" target="_blank">
                         <button style="padding: 5px 10px; background: #1877F2; color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;">Visit Profile</button>
@@ -326,8 +364,7 @@
                 
                 <div class="contact-item" >
                     <div style="display: flex; align-items: center; gap: 10px;">
-                        <i class="fa-solid fa-envelope" style="font-size: 24px; color: #FF5733;"></i>
-                        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=paudelprajwal51@gmail.com" style="color: #00d8ff; text-decoration: none;">paudelprajwal51@gmail.com</a></p>
+                        <p class="Email">Email:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=paudelprajwal51@gmail.com" style="color: #00d8ff; text-decoration: none;">paudelprajwal51@gmail.com</a></p>
                     </div>
                 </div>
             </div>

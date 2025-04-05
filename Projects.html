@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Durga's Portfolio - Projects</title>
+    <link rel="stylesheet" href="globalstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
     <style>
@@ -166,7 +167,24 @@
             <a href="./Projects.html">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
+        <!-- Hamburger Menu for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
+    
+    <!-- Side Navigation for mobile -->
+    <div id="sideNav" class="side-nav">
+        <div class="aside-photo"><img src="./prophoto.png" alt="Profile error"></div>
+        <div class="aside-name" style="font-size: 20px;display: flex;flex-wrap: wrap;color: #00d8ff;">Durga Prasad Paudel</div>
+        <div class="aside-links">
+            <a href="./index.html">Home</a>
+            <a href="./Projects.html">Projects</a>
+            <a href="./About.html">About Me</a>
+        </div>
+    </div>
 
     <div class="container">
         <!-- Project 1 -->

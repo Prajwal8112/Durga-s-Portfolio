@@ -112,3 +112,16 @@ window.addEventListener("resize", () => {
 
 initParticles();
 animate();
+
+
+
+
+function toggleMenu() {
+  const sideNav = document.getElementById('sideNav');
+  // Check the current position of the sideNav and slide it in or out
+  if (sideNav.style.left === '0px') {
+      sideNav.style.left = '-250px'; // Slide it out
+  } else {
+      sideNav.style.left = '0'; // Slide it in
+  }
+}

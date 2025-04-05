@@ -1,0 +1,81 @@
+
+/* Hamburger Menu Icon for mobile */
+.hamburger {
+display: none;
+flex-direction: column;
+gap: 5px;
+cursor: pointer;
+z-index: 1002; /* To make sure it stays on top */
+}
+
+.hamburger .bar {
+width: 25px;
+height: 4px;
+background-color: white;
+border-radius: 2px;
+}
+
+/* Side Navigation */
+.side-nav {
+position: fixed;
+top: 0;
+left: -250px; /* Initially hidden on the left side */
+height: 100%;
+width: 250px;
+background-color: rgba(0, 0, 0, 0.9);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: 0.3s;
+z-index: 1001; /* Make sure it's behind the hamburger */
+}
+
+.side-nav a {
+color: white;
+text-decoration: none;
+font-size: 30px;
+margin: 20px 0;
+transition: 0.3s;
+}
+
+.side-nav a:hover {
+color: #00d8ff;
+}
+
+.aside-photo img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #00d8ff;
+    margin-bottom: 15px;
+}
+
+.aside-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.aside-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+/* Responsive: Hamburger shows up on mobile */
+@media screen and (max-width: 768px) {
+.navbar .nav-links {
+display: none; /* Hide the navbar links on mobile */
+}
+
+.hamburger {
+display: flex; /* Show hamburger icon on mobile */
+}
+}
+
+
