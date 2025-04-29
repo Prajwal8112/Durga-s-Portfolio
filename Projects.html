@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="globalstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -91,7 +92,8 @@
         }
 
         .project-card {
-            background: #1e1e1e;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -145,6 +147,17 @@
             display: inline-block;
             transition: background-color 0.3s;
         }
+        .project-info .view-b{
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+
+        }
 
         .project-info .view-btn:hover {
             background-color: #008c9e;
@@ -161,10 +174,10 @@
 <body>
     <canvas id="glowCanvas"></canvas>
     <nav class="navbar">
-        <div style="font-size: 26px;">Portfolio</div>
+        <div style="font-size: 26px;font-family:'Orbitron', sans-serif; color: whitesmoke; font-size: 30px;letter-spacing: 4px;">DPP</div>
         <div class="nav-links">
             <a href="./index.html">Home</a>
-            <a href="./Projects.html">Projects</a>
+            <a href="./Projects.html" style="color: #00d8ff;">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
         <!-- Hamburger Menu for mobile -->
@@ -193,7 +206,11 @@
             <div class="project-info">
                 <h3>Personal Porfolio Design 1</h3>
                 <p>This portfolio website showcases a developer/designer’s profile with a clean, modern UI. Technologies used are like:- HTML: For structuring the webpage. CSS (Flexbox/Grid, Shadows, Gradients): For layout, styling, and responsiveness.</p>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
                 <a href="project1-details.html" class="view-btn">View Project</a>
+                <a href="project1-details.html" class="view-b">View code</a>
+                </div>
+                
             </div>
         </div>
 
@@ -203,7 +220,10 @@
             <div class="project-info">
                 <h3>My Portfolio Design</h3>
                 <p>This is a personal portfolio website for Durga Prasad Paudel, showcasing skills, interests, and certifications in web design, automotive enthusiasm, and graphic design.Technologies used are like:- HTML: For structuring the webpage. CSS (Flexbox/Grid, Shadows, Gradients): For layout, styling, and responsiveness. JS: For Viewing Certificates </p>
-                <a href="http://127.0.0.1:5501/Home.html" class="view-btn">View Project</a>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
+                    <a href="project1-details.html" class="view-btn">View Project</a>
+                    <a href="project1-details.html" class="view-b">View code</a>
+                    </div>
             </div>
         </div>
 
@@ -213,7 +233,10 @@
             <div class="project-info">
                 <h3>Certificating Design</h3>
                 <p>This web page design with no animation, effects and hovering was done by me during the time of my certifications with the time interval of 1 week.</p>
-                <a href="project3-details.html" class="view-btn">View Project</a>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
+                    <a href="project1-details.html" class="view-btn">View Project</a>
+                    <a href="project1-details.html" class="view-b">View code</a>
+                    </div>
             </div>
         </div>
 
@@ -223,7 +246,10 @@
             <div class="project-info">
                 <h3>iPhone-Style Calculator</h3>
                 <p>Designed an elegant calculator UI inspired by Apple's iOS calculator. Implemented smooth button styling with hover effects and rounded edges.Added a functional calculator logic using a simple myFunction() JavaScript function. Used CSS transitions and shadows to enhance the user experience. Optimized layout and spacing for better usability.</p>
-                <a href="project3-details.html" class="view-btn">View Project</a>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
+                    <a href="project1-details.html" class="view-btn">View Project</a>
+                    <a href="project1-details.html" class="view-b">View code</a>
+                    </div>
             </div>
         </div>
 
@@ -233,7 +259,10 @@
             <div class="project-info">
                 <h3>Floppy Bird Game</h3>
                 <p>This game is created using scratch during the certifications time of block programming in just one day.</p>
-                <a href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted" class="view-btn">View Project</a>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
+                    <a href="project1-details.html" class="view-btn">View Project</a>
+                    <a href="project1-details.html" class="view-b">View code</a>
+                    </div>
             </div>
         </div>
 
@@ -243,7 +272,10 @@
             <div class="project-info">
                 <h3>Windows 11 Clone</h3>
                 <p>A fully functional Windows 11 UI clone built using pure HTML, CSS, and JavaScript. This project replicates key Windows 11 features</p>
-                <a href="" class="view-btn">View Project</a>
+                <div style="display: flex;flex-direction: row;gap: 15px;flex-wrap: wrap;">
+                    <a href="project1-details.html" class="view-btn">View Project</a>
+                    <a href="https://github.com/Prajwal8112/Win11/blob/main/win11/Win11.html" class="view-b">View code</a>
+                    </div>
             </div>
         </div>
     </div>

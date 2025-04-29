@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">   
+     <style>
         * {
             margin: 0;
             box-sizing: border-box;
@@ -99,7 +100,7 @@
             justify-content: center;
             align-items: center;
             max-width: 1000px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(5px);
             border-radius: 20px;
             padding: 40px;
@@ -159,6 +160,7 @@
         
         .text h1 {
             font-size: 36px;
+            font-family: 'Orbitron', sans-serif;
             color: #00d8ff;
             overflow: hidden;
             white-space: nowrap;
@@ -201,7 +203,7 @@
             justify-content: center;
             align-items: center;
             max-width: 70.08vw;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
@@ -255,6 +257,9 @@
             background: rgba(255, 255, 255, 0.1);
         }
         @media screen and (max-width: 480px) {
+            body{
+                box-sizing: border-box;
+            }
             .container {
                 flex-direction: column;
                 text-align: center;
@@ -303,11 +308,11 @@
 <body>
     <canvas id="glowCanvas"></canvas>
     <nav class="navbar">
-        <div style="font-size: 26px;">Portfolio</div>
+        <div style="font-size: 26px;font-family:'Orbitron', sans-serif; color: whitesmoke; font-size: 30px;letter-spacing: 4px;">DPP</div>
         <div class="nav-links">
             <a href="./index.html">Home</a>
             <a href="./Projects.html">Projects</a>
-            <a href="./About.html">About Me</a>
+            <a href="./About.html" style="color: #00d8ff;">About Me</a>
         </div>
         <!-- Hamburger Menu for mobile -->
         <div class="hamburger" onclick="toggleMenu()">
@@ -344,7 +349,7 @@
 
     <section>
         <div class="container2">
-            <h2>Contact Me</h2>
+            <h2 style="font-family: 'Orbitron', sans-serif;">Contact Me</h2>
             <div class="contact-items" style="display: flex; flex-direction: column; gap: 20px; align-items: center; width: 550px;">
                 
                 <div class="contact-item" >

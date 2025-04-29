@@ -6,6 +6,7 @@
     <title>Durga's Portfolio</title>
     <link rel="stylesheet" href="globalstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,7 +16,7 @@
             scroll-behavior: smooth;
         }
         body {
-            background: #121212;
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e);
             color: white;
         }
 
@@ -93,8 +94,8 @@
             min-height: 80vh;
             width: 90%;
             max-width: 1200px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
             margin-top: 50px;
             padding: 40px;
@@ -119,7 +120,7 @@
         }
 
         .hero img {
-            width: 240px;
+            width: 250px;
             height: 250px;
             border-radius: 50%;
             box-shadow: 0px 0px 15px #00d8ff;
@@ -131,8 +132,32 @@
         }
         .hero h1 {
             font-size: 50px;
-            margin-top: 20px;
+            font-family: 'orbitron', sans-serif;
             color: #00d8ff;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #00d8ff;
+            margin-top: 15px;
+            width: 0;
+            animation: typing 4s steps(20, end) forwards, blink 0.7s infinite alternate;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: #00d8ff;
+            }
+            to {
+                border-color: transparent;
+            }
         }
         .hero p {
             font-size: 22px;
@@ -197,7 +222,7 @@
         .skill-card {
             width: 180px;
             height: 180px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -324,6 +349,9 @@
           }
         }
         @media screen and (max-width: 480px) and (orientation: landscape) {
+            body{
+                box-sizing: border-box;
+            }
             .navbar {
                 padding: 15px 20px;
             }
@@ -336,8 +364,8 @@
                 padding: 20px;
             }
             .hero img {
-                width: 200px;
-                height: 180px;
+                width: 150px;
+                height: 130px;
             }
             .hero h1 {
                 font-size: 36px;
@@ -372,9 +400,9 @@
     <canvas id="glowCanvas"></canvas>
 
     <nav class="navbar">
-        <div style="font-size: 26px;">Portfolio</div>
+        <div style="font-size: 26px;font-family:'Orbitron', sans-serif; color: whitesmoke; font-size: 30px;letter-spacing: 4px;">DPP</div>
         <div class="nav-links">
-            <a href="./index.html">Home</a>
+            <a href="./index.html" style="color: #00d8ff;">Home</a>
             <a href="./Projects.html">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
@@ -391,7 +419,7 @@
         <div class="aside-photo"><img src="./prophoto.png" alt="Profile error"></div>
         <div class="aside-name" style="font-size: 20px;display: flex;flex-wrap: wrap;color: #00d8ff;">Durga Prasad Paudel</div>
         <div class="aside-links">
-            <a href="./index.html">Home</a>
+            <a href="./index.html" >Home</a>
             <a href="./Projects.html">Projects</a>
             <a href="./About.html">About Me</a>
         </div>
@@ -402,7 +430,7 @@
         <div class="hero">
         <img src="./prophoto.png" alt="Profile">
         <h1>Durga Prasad Paudel</h1>
-        <p>I'm a <span style="animation: slideIn 1s ease-in-out forwards;color: yellow;" class="skl">Web Designer</span> | <span style="animation: slideIn 2s ease-in-out forwards;color: yellow;" class="skl"> Automotive Enthusiast</span>  | <span style="animation: slideIn 3s ease-in-out forwards;color: yellow;" class="skl">Graphic Designer</span>  </p>
+        <p>I'm a <span style="animation: slideIn 1150ms ease-in-out forwards;color: yellow;font-size: 26px;" class="skl">Web Designer</span> | <span style="animation: slideIn 2250ms ease-in-out forwards;color: yellow;font-size: 26px;" class="skl"> Automotive Enthusiast</span>  | <span style="animation: slideIn 3350ms ease-in-out forwards;color: yellow;font-size: 26px;" class="skl">Graphic Designer</span>  </p>
         <a download href="./Resume.jpg" class="contact-btn">Download Resume</a>
         </div>
         
